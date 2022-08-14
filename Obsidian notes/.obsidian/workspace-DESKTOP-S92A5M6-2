@@ -1,0 +1,103 @@
+{
+  "main": {
+    "id": "832c151c0d09892a",
+    "type": "split",
+    "children": [
+      {
+        "id": "6e63f9036ada0073",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Adding axial induction to floris.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f02bf0916bddb879",
+    "type": "split",
+    "children": [
+      {
+        "id": "a5a08ea0d6457fda",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "708e83bab2d3fbf6",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "e31e7faee6ea5701",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "prethe",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 231
+  },
+  "right": {
+    "id": "28a6267de7c250f9",
+    "type": "split",
+    "children": [
+      {
+        "id": "88803df6f10fe71b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "905b37e37a47a013",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Adding axial induction to floris.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "active": "6e63f9036ada0073",
+  "lastOpenFiles": [
+    "Adding axial induction to floris.md",
+    "Prethesis.md",
+    "Thesis Kanban.md",
+    "Kanban Board.md",
+    "V80.md",
+    "07-04-2022 Mahdi.md",
+    "Meetings.md",
+    "22-03-2022 Mahdi.md",
+    "08-03-2022 Mahdi.md",
+    "Floris theory.md"
+  ]
+}

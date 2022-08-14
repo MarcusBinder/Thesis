@@ -1,0 +1,103 @@
+{
+  "main": {
+    "id": "832c151c0d09892a",
+    "type": "split",
+    "children": [
+      {
+        "id": "a700a025462bfff3",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Thesis.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f02bf0916bddb879",
+    "type": "split",
+    "children": [
+      {
+        "id": "a5a08ea0d6457fda",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "708e83bab2d3fbf6",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "e31e7faee6ea5701",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 231
+  },
+  "right": {
+    "id": "28a6267de7c250f9",
+    "type": "split",
+    "children": [
+      {
+        "id": "88803df6f10fe71b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "905b37e37a47a013",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Thesis.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": true,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "a700a025462bfff3",
+  "lastOpenFiles": [
+    "Thesis.md",
+    "Thesis Kanban.md",
+    "Text snippets.md",
+    "Prethesis.md",
+    "Governing equations.md",
+    "CFD.md",
+    "Finite volume method.md",
+    "Turbulence exam.md",
+    "Introduction to turbulence/the equations of motion.md",
+    "Solving linear equation systems.md"
+  ]
+}
