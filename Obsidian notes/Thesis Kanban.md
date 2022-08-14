@@ -8,13 +8,15 @@ kanban-plugin: basic
 
 - [ ] Reinforcement learning tutorial https://www.youtube.com/watch?v=XbWhJdQgi7E
 - [ ] Look into dynamic floris https://github.com/MarcusBecker-GitHub/FLORIDyn_Matlab<br>#Someday
+- [ ] UC berkley kursus om RL<br>http://rail.eecs.berkeley.edu/deeprlcourse/
 - [ ] Do this course https://www.youtube.com/watch?v=Mut_u40Sqz4&t=1011s<br>#maybe
 - [ ] Maybe read this blog post <br>https://lilianweng.github.io/posts/2018-04-08-policy-gradient/
 
 
 ## To do
 
-- [ ] UC berkley kursus om RL<br>http://rail.eecs.berkeley.edu/deeprlcourse/
+- [ ] Do petting zoo tutorial https://towardsdatascience.com/multi-agent-deep-reinforcement-learning-in-15-lines-of-code-using-pettingzoo-e0b963c0820b
+- [ ] Read/watch Multi-agent Reinforcement learning 10 min
 - [ ] Create new timers <br>#admin
 - [ ] Create overleaf document<br>#admin
 - [ ] Update Floris
@@ -22,11 +24,11 @@ kanban-plugin: basic
 
 ## Doing
 
-- [ ] Do RLVS 2021 course<br>Videos done 4/24 <br>https://www.youtube.com/playlist?list=PLJct-r1rjHKmqdcLMXHsX8Hp-cvUWMild
 
 
 ## Done
 
+- [ ] Do RLVS 2021 course<br>Videos done 4/24 <br>https://www.youtube.com/playlist?list=PLJct-r1rjHKmqdcLMXHsX8Hp-cvUWMild
 - [ ] SB3 tutorial https://github.com/araffin/rl-tutorial-jnrr19/tree/sb3
 - [ ] Make a gif of the horns rev power plots https://stackoverflow.com/questions/753190/programmatically-generate-video-or-animated-gif-in-python
 - [ ] Find out why the yaw optimization isnt symmetric... I think it is from the secondary effects

@@ -6,12 +6,24 @@
       {
         "id": "a700a025462bfff3",
         "type": "leaf",
+        "dimension": 42.74533413606261,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Thesis.md",
+            "file": "Big list of yt videos.md",
             "mode": "source",
             "source": false
+          }
+        }
+      },
+      {
+        "id": "7a37757810a77321",
+        "type": "leaf",
+        "dimension": 57.25466586393738,
+        "state": {
+          "type": "kanban",
+          "state": {
+            "file": "Thesis Kanban.md"
           }
         }
       }
@@ -53,7 +65,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 231
+    "width": 231,
+    "collapsed": true
   },
   "right": {
     "id": "28a6267de7c250f9",
@@ -69,7 +82,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Thesis.md",
+                "file": "Thesis Kanban.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,20 +97,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 199.5
   },
-  "active": "a700a025462bfff3",
+  "active": "7a37757810a77321",
   "lastOpenFiles": [
-    "Thesis.md",
+    "Big list of yt videos.md",
     "Thesis Kanban.md",
+    "Thesis.md",
     "Text snippets.md",
     "Prethesis.md",
     "Governing equations.md",
     "CFD.md",
     "Finite volume method.md",
     "Turbulence exam.md",
-    "Introduction to turbulence/the equations of motion.md",
-    "Solving linear equation systems.md"
+    "Introduction to turbulence/the equations of motion.md"
   ]
 }
