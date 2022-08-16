@@ -6,24 +6,12 @@
       {
         "id": "a700a025462bfff3",
         "type": "leaf",
-        "dimension": 42.74533413606261,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Big list of yt videos.md",
+            "file": "Thesis.md",
             "mode": "source",
             "source": false
-          }
-        }
-      },
-      {
-        "id": "7a37757810a77321",
-        "type": "leaf",
-        "dimension": 57.25466586393738,
-        "state": {
-          "type": "kanban",
-          "state": {
-            "file": "Thesis Kanban.md"
           }
         }
       }
@@ -82,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Thesis Kanban.md",
+                "file": "Thesis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +87,7 @@
     "direction": "horizontal",
     "width": 199.5
   },
-  "active": "7a37757810a77321",
+  "active": "a700a025462bfff3",
   "lastOpenFiles": [
     "Big list of yt videos.md",
     "Thesis Kanban.md",

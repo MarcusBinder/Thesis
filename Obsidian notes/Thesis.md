@@ -1,6 +1,13 @@
 # Thesis
 
 
+MARL
+https://towardsdatascience.com/ive-been-thinking-about-multi-agent-reinforcement-learning-marl-and-you-probably-should-be-too-8f1e241606ac
+
+https://github.com/Farama-Foundation/PettingZoo
+https://github.com/deepmind/acme
+
+
 To do list is:
 [[Thesis Kanban]]
 
