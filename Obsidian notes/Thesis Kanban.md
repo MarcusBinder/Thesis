@@ -15,9 +15,6 @@ kanban-plugin: basic
 
 ## To do
 
-- [ ] Do petting zoo tutorial https://towardsdatascience.com/multi-agent-deep-reinforcement-learning-in-15-lines-of-code-using-pettingzoo-e0b963c0820b
-- [ ] Read/watch Multi-agent Reinforcement learning 10 min
-- [ ] Create new timers <br>#admin
 - [ ] Create overleaf document<br>#admin
 - [ ] Update Floris
 
@@ -28,6 +25,9 @@ kanban-plugin: basic
 
 ## Done
 
+- [ ] Read/watch Multi-agent Reinforcement learning 10 min
+- [ ] Do petting zoo tutorial https://towardsdatascience.com/multi-agent-deep-reinforcement-learning-in-15-lines-of-code-using-pettingzoo-e0b963c0820b
+- [ ] Create new timers <br>#admin
 - [ ] Do RLVS 2021 course<br>Videos done 4/24 <br>https://www.youtube.com/playlist?list=PLJct-r1rjHKmqdcLMXHsX8Hp-cvUWMild
 - [ ] SB3 tutorial https://github.com/araffin/rl-tutorial-jnrr19/tree/sb3
 - [ ] Make a gif of the horns rev power plots https://stackoverflow.com/questions/753190/programmatically-generate-video-or-animated-gif-in-python

@@ -7,11 +7,9 @@
         "id": "a700a025462bfff3",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "kanban",
           "state": {
-            "file": "Thesis.md",
-            "mode": "source",
-            "source": false
+            "file": "Thesis Kanban.md"
           }
         }
       }
@@ -70,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Thesis.md",
+                "file": "Thesis Kanban.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,11 +87,11 @@
   },
   "active": "a700a025462bfff3",
   "lastOpenFiles": [
+    "Prethesis.md",
+    "Thesis.md",
     "Big list of yt videos.md",
     "Thesis Kanban.md",
-    "Thesis.md",
     "Text snippets.md",
-    "Prethesis.md",
     "Governing equations.md",
     "CFD.md",
     "Finite volume method.md",
