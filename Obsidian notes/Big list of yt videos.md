@@ -44,3 +44,8 @@ https://www.youtube.com/watch?v=K2qjAixgLqk
 	- hans github repo:  https://github.com/dylman123/multiagent-particle-envs
 	- Hans paper: https://drive.google.com/file/d/17augVhKg8gvDppyEylqi4nELYEOOcmsP/view Noget bonus paper: https://drive.google.com/file/d/1xR1_6gmgvQITjRszXV9jNmuV6-RS-_jG/view
 	- Fin video der forklare hvordan han gør lidt simple ting. 
+
+-  Deep Reinforcement Learning for Multi-Agent Interaction - Stefano Albrecht https://www.youtube.com/watch?v=FOLMxWXazCo
+	- Really good video.
+	- Covers some basic information, but he talks about his reasearch group, and the github repo he has!
+	- So in short: Papers with code!

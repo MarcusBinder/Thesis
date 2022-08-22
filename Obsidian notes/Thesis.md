@@ -1,5 +1,24 @@
 # Thesis
 
+### Nomenclature
+- MARL --  Multi agent reinforcement learning   
+
+## Possible directions and problems to look into for the thesis
+
+- Define the goal objective/goal function
+	- Should it be just power output, or should load mitigation/damage be included 
+
+- The first step would be to use MARL on a 3x3 farm on a single wind direction.
+	- Look into MARL algorithms (IAC, MADDPG... )
+	- Find and code implementation
+
+Then, what comes next?
+- Use GNN to simulate if a turbine is down for maintenance?
+- Use transfer learning to optimize a slightly different farm layout? (square to rhomboid) 
+- Use transfer learning to scale up the farm (3x3 -> 9x9)
+
+
+
 
 
 https://github.com/Farama-Foundation/PettingZoo
