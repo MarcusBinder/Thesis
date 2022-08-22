@@ -19,9 +19,9 @@ Then, what comes next?
 
 
 
-
-
+Repositories used:
 https://github.com/Farama-Foundation/PettingZoo
+Maybe look into this, but I think petting zoo is fine
 https://github.com/deepmind/acme
 
 

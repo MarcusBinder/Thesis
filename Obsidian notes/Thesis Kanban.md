@@ -6,10 +6,8 @@ kanban-plugin: basic
 
 ## Someday
 
-- [ ] Reinforcement learning tutorial https://www.youtube.com/watch?v=XbWhJdQgi7E
 - [ ] Look into dynamic floris https://github.com/MarcusBecker-GitHub/FLORIDyn_Matlab<br>#Someday
 - [ ] UC berkley kursus om RL<br>http://rail.eecs.berkeley.edu/deeprlcourse/
-- [ ] Do this course https://www.youtube.com/watch?v=Mut_u40Sqz4&t=1011s<br>#maybe
 - [ ] Maybe read this blog post <br>https://lilianweng.github.io/posts/2018-04-08-policy-gradient/
 
 
@@ -21,10 +19,13 @@ kanban-plugin: basic
 
 ## Doing
 
+- [ ] Create multi environment.<br>Look into already made environments for help
 
 
 ## Done
 
+- [ ] Reinforcement learning tutorial https://www.youtube.com/watch?v=XbWhJdQgi7E
+- [ ] Do this course https://www.youtube.com/watch?v=Mut_u40Sqz4&t=1011s<br>#maybe
 - [ ] Read/watch Multi-agent Reinforcement learning 10 min
 - [ ] Do petting zoo tutorial https://towardsdatascience.com/multi-agent-deep-reinforcement-learning-in-15-lines-of-code-using-pettingzoo-e0b963c0820b
 - [ ] Create new timers <br>#admin
