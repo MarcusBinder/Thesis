@@ -13,8 +13,12 @@ kanban-plugin: basic
 
 ## To do
 
-- [ ] Create overleaf document<br>#admin
 - [ ] Update Floris
+- [ ] Create plots like YT video for introduction about future power<br>2050 projections
+- [ ] Add back in the scaling factor to Floris
+- [ ] Create + refine environment for RL
+- [ ] Read about and choose algorithm
+- [ ] "code algorithm"
 
 
 ## Doing
@@ -25,6 +29,7 @@ kanban-plugin: basic
 ## Done
 
 - [ ] Reinforcement learning tutorial https://www.youtube.com/watch?v=XbWhJdQgi7E
+- [ ] Create overleaf document<br>#admin
 - [ ] Do this course https://www.youtube.com/watch?v=Mut_u40Sqz4&t=1011s<br>#maybe
 - [ ] Read/watch Multi-agent Reinforcement learning 10 min
 - [ ] Do petting zoo tutorial https://towardsdatascience.com/multi-agent-deep-reinforcement-learning-in-15-lines-of-code-using-pettingzoo-e0b963c0820b

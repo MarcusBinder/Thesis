@@ -49,3 +49,4 @@ https://www.youtube.com/watch?v=K2qjAixgLqk
 	- Really good video.
 	- Covers some basic information, but he talks about his reasearch group, and the github repo he has!
 	- So in short: Papers with code!
+		- https://agents.inf.ed.ac.uk/publications/

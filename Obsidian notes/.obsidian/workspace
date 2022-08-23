@@ -9,6 +9,18 @@
         "state": {
           "type": "markdown",
           "state": {
+            "file": "Text snippets.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "fc833cbaffc1b490",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
             "file": "Thesis.md",
             "mode": "source",
             "source": false
@@ -70,7 +82,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Thesis.md",
+                "file": "Text snippets.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,11 +101,11 @@
   },
   "active": "a700a025462bfff3",
   "lastOpenFiles": [
-    "Thesis Kanban.md",
     "Thesis.md",
+    "Thesis Kanban.md",
+    "Text snippets.md",
     "Big list of yt videos.md",
     "Prethesis.md",
-    "Text snippets.md",
     "Governing equations.md",
     "CFD.md",
     "Finite volume method.md",

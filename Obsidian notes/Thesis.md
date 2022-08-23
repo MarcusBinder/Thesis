@@ -33,6 +33,20 @@ To do list is:
 
 [[Text snippets]]
 
+
+### Transfer learning
+https://github.com/elisim/Transfer-Learning-In-RL
+https://github.com/Jonathan-Pearce/transfer_learning_rl
+https://github.com/anksng/Transfer-learning-in-Deep-Reinforcement-learning
+https://github.com/ianxxiao/reinforcement_learning_project
+https://github.com/ianxxiao/transfer_learning_RL
+
+
+### MBPO
+https://github.com/x35f/unstable_baselines
+https://github.com/Xingyu-Lin/mbpo_pytorch
+https://github.com/jannerm/mbpo
+
 ### Multiagent RL youtube videos to watch
 [[Big list of yt videos]]
 
