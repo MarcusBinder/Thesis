@@ -9,25 +9,28 @@ kanban-plugin: basic
 - [ ] Look into dynamic floris https://github.com/MarcusBecker-GitHub/FLORIDyn_Matlab<br>#Someday
 - [ ] UC berkley kursus om RL<br>http://rail.eecs.berkeley.edu/deeprlcourse/
 - [ ] Maybe read this blog post <br>https://lilianweng.github.io/posts/2018-04-08-policy-gradient/
+- [ ] Create multi environment.<br>Look into already made environments for help<br>#maybe
 
 
 ## To do
 
-- [ ] Update Floris
 - [ ] Create plots like YT video for introduction about future power<br>2050 projections
 - [ ] Add back in the scaling factor to Floris
-- [ ] Create + refine environment for RL
 - [ ] Read about and choose algorithm
 - [ ] "code algorithm"
+- [ ] Find limits for yaw angels Floris
+- [ ] Do the overleaf layout
 
 
 ## Doing
 
-- [ ] Create multi environment.<br>Look into already made environments for help
+- [ ] Get tensorboard to work
 
 
 ## Done
 
+- [ ] Update Floris
+- [ ] Create + refine environment for RL
 - [ ] Reinforcement learning tutorial https://www.youtube.com/watch?v=XbWhJdQgi7E
 - [ ] Create overleaf document<br>#admin
 - [ ] Do this course https://www.youtube.com/watch?v=Mut_u40Sqz4&t=1011s<br>#maybe
