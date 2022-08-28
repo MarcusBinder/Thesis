@@ -4,24 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "a700a025462bfff3",
+        "id": "43541d855776a00d",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Text snippets.md",
+            "file": "Spinning up notes.md",
             "mode": "source",
             "source": false
-          }
-        }
-      },
-      {
-        "id": "fc833cbaffc1b490",
-        "type": "leaf",
-        "state": {
-          "type": "kanban",
-          "state": {
-            "file": "Thesis Kanban.md"
           }
         }
       }
@@ -80,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Thesis Kanban.md",
+                "file": "Spinning up notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,17 +87,17 @@
     "direction": "horizontal",
     "width": 199.5
   },
-  "active": "fc833cbaffc1b490",
+  "active": "43541d855776a00d",
   "lastOpenFiles": [
+    "Untitled.md",
+    "Spinning up notes.md",
     "Text snippets.md",
-    "Thesis Kanban.md",
     "Thesis.md",
+    "Transfer learning.md",
+    "Thesis Kanban.md",
     "Big list of yt videos.md",
     "Prethesis.md",
     "Governing equations.md",
-    "CFD.md",
-    "Finite volume method.md",
-    "Turbulence exam.md",
-    "Introduction to turbulence/the equations of motion.md"
+    "CFD.md"
   ]
 }

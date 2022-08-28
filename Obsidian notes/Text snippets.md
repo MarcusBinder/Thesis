@@ -11,6 +11,7 @@ They can be Cooperative (helping each other) or adversarial (competing with each
 Decentralized vs centralized learning 
 https://www.youtube.com/watch?v=qgb0gyrpiGk
 
+## [[Spinning up notes]]
 
 
 # Thesis layout

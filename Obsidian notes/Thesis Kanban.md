@@ -14,21 +14,23 @@ kanban-plugin: basic
 
 ## To do
 
-- [ ] Create plots like YT video for introduction about future power<br>2050 projections
-- [ ] Add back in the scaling factor to Floris
-- [ ] Read about and choose algorithm
-- [ ] "code algorithm"
-- [ ] Find limits for yaw angels Floris
+- [ ] Create plots like YT video for introduction about future power<br>2050 projections<br>#Brainless
+- [ ] Add back in the scaling factor to Floris<br>#Brainless
+- [ ] Read about and choose algorithm<br>#thinking
+- [ ] "code algorithm"<br>#thinking
+- [ ] Find limits for yaw angels Floris<br>#thinking
 - [ ] Do the overleaf layout
+- [ ] Look into transfer learning
 
 
 ## Doing
 
-- [ ] Get tensorboard to work
+- [ ] Spinning up code algorithms<br>#thinking
 
 
 ## Done
 
+- [ ] Get tensorboard to work
 - [ ] Update Floris
 - [ ] Create + refine environment for RL
 - [ ] Reinforcement learning tutorial https://www.youtube.com/watch?v=XbWhJdQgi7E

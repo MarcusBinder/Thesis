@@ -25,6 +25,8 @@ Maybe look into this, but I think petting zoo is fine
 https://github.com/deepmind/acme
 
 
+
+
 MARL PAPERS:
 https://github.com/LantaoYu/MARL-Papers
 
@@ -34,13 +36,11 @@ To do list is:
 [[Text snippets]]
 
 
-### Transfer learning
-https://github.com/elisim/Transfer-Learning-In-RL
-https://github.com/Jonathan-Pearce/transfer_learning_rl
-https://github.com/anksng/Transfer-learning-in-Deep-Reinforcement-learning
-https://github.com/ianxxiao/reinforcement_learning_project
-https://github.com/ianxxiao/transfer_learning_RL
+## [[Transfer learning]]
 
+
+
+https://www.reddit.com/r/reinforcementlearning/comments/wx9akm/question_regarding_transfer_learning_with/
 
 ### MBPO
 https://github.com/x35f/unstable_baselines
