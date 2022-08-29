@@ -7,11 +7,9 @@
         "id": "43541d855776a00d",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "kanban",
           "state": {
-            "file": "Spinning up notes.md",
-            "mode": "source",
-            "source": false
+            "file": "Thesis Kanban.md"
           }
         }
       }
@@ -70,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spinning up notes.md",
+                "file": "Thesis Kanban.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,10 +87,10 @@
   },
   "active": "43541d855776a00d",
   "lastOpenFiles": [
-    "Untitled.md",
-    "Spinning up notes.md",
-    "Text snippets.md",
     "Thesis.md",
+    "Text snippets.md",
+    "Spinning up notes.md",
+    "Untitled.md",
     "Transfer learning.md",
     "Thesis Kanban.md",
     "Big list of yt videos.md",

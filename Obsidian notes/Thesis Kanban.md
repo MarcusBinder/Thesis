@@ -19,17 +19,19 @@ kanban-plugin: basic
 - [ ] Read about and choose algorithm<br>#thinking
 - [ ] "code algorithm"<br>#thinking
 - [ ] Find limits for yaw angels Floris<br>#thinking
-- [ ] Do the overleaf layout
 - [ ] Look into transfer learning
 
 
 ## Doing
 
+- [ ] Make docs for overview of trained agents
+- [ ] Make code that can compare the trained agents
 - [ ] Spinning up code algorithms<br>#thinking
 
 
 ## Done
 
+- [ ] Do the overleaf layout
 - [ ] Get tensorboard to work
 - [ ] Update Floris
 - [ ] Create + refine environment for RL
