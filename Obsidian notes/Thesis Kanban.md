@@ -12,25 +12,36 @@ kanban-plugin: basic
 - [ ] Create multi environment.<br>Look into already made environments for help<br>#maybe
 
 
-## To do
+## To do, low priority
 
-- [ ] Create plots like YT video for introduction about future power<br>2050 projections<br>#Brainless
 - [ ] Add back in the scaling factor to Floris<br>#Brainless
-- [ ] Read about and choose algorithm<br>#thinking
 - [ ] "code algorithm"<br>#thinking
-- [ ] Find limits for yaw angels Floris<br>#thinking
-- [ ] Look into transfer learning
+- [ ] Read about and choose algorithm<br>#thinking
+- [ ] Spinning up code algorithms<br>#thinking
+
+
+## To do, high pririty
+
+- [ ] Make code that can compare the trained agents
+- [ ] Look into transfer learning<br>[[Transfer learning]]
+- [ ] Make overview and train some agents
+- [ ] Read about how to make stable baselines only save best agents
+
+
+## Waiting
+
+- [ ] Make code so that trained agent can be loaded on windows.<br>https://github.com/hill-a/stable-baselines/issues/1024
+- [ ] Find limits for yaw angels Floris<br>#thinking<br>Wainting on guthub reply
 
 
 ## Doing
 
-- [ ] Make docs for overview of trained agents
-- [ ] Make code that can compare the trained agents
-- [ ] Spinning up code algorithms<br>#thinking
 
 
 ## Done
 
+- [ ] Make docs for overview of trained agents
+- [ ] Create plots like YT video for introduction about future power<br>2050 projections<br>#Brainless
 - [ ] Do the overleaf layout
 - [ ] Get tensorboard to work
 - [ ] Update Floris
