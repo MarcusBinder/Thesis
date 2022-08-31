@@ -9,11 +9,11 @@ kanban-plugin: basic
 - [ ] Look into dynamic floris https://github.com/MarcusBecker-GitHub/FLORIDyn_Matlab<br>#Someday
 - [ ] UC berkley kursus om RL<br>http://rail.eecs.berkeley.edu/deeprlcourse/
 - [ ] Maybe read this blog post <br>https://lilianweng.github.io/posts/2018-04-08-policy-gradient/
-- [ ] Create multi environment.<br>Look into already made environments for help<br>#maybe
 
 
 ## To do, low priority
 
+- [ ] Make colors for plots the same<br>So wind_color is all the same and so on...
 - [ ] Add back in the scaling factor to Floris<br>#Brainless
 - [ ] "code algorithm"<br>#thinking
 - [ ] Read about and choose algorithm<br>#thinking
@@ -22,15 +22,16 @@ kanban-plugin: basic
 
 ## To do, high pririty
 
-- [ ] Make code that can compare the trained agents
+- [ ] Lav et nyt environment så den sampler hele tiden en ny state.
+- [ ] Change reward to be percentage increase and test it a bit
 - [ ] Look into transfer learning<br>[[Transfer learning]]
 - [ ] Make overview and train some agents
 - [ ] Read about how to make stable baselines only save best agents
+- [ ] Make a short picture detailing what turbine is what in the "simulation"
 
 
 ## Waiting
 
-- [ ] Make code so that trained agent can be loaded on windows.<br>https://github.com/hill-a/stable-baselines/issues/1024
 - [ ] Find limits for yaw angels Floris<br>#thinking<br>Wainting on guthub reply
 
 
@@ -40,6 +41,8 @@ kanban-plugin: basic
 
 ## Done
 
+- [ ] Make code that can compare the trained agents
+- [ ] Make code so that trained agent can be loaded on windows.<br>https://github.com/hill-a/stable-baselines/issues/1024
 - [ ] Make docs for overview of trained agents
 - [ ] Create plots like YT video for introduction about future power<br>2050 projections<br>#Brainless
 - [ ] Do the overleaf layout
@@ -77,6 +80,11 @@ kanban-plugin: basic
 - [ ] Spend 4 hours doing overleaf
 - [ ] Implement axial Induction in Floris https://github.com/search?p=2&q=axial+induction+floris&type=Code <br>Est 2 Days<br>This is probably a work in progress, but atm it's done.<br>Look at [[Adding axial induction to floris]]
 - [ ] Look into the new super posisiton model for Floris <br>Est 1 hr<br>Im pretty sure that it is only avaliable in the cc model
+
+
+## Scrapped
+
+- [ ] Create multi environment.<br>Look into already made environments for help<br>#maybe
 
 
 
