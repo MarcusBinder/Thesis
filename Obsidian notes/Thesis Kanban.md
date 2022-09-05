@@ -18,21 +18,19 @@ kanban-plugin: basic
 - [ ] "code algorithm"<br>#thinking
 - [ ] Read about and choose algorithm<br>#thinking
 - [ ] Spinning up code algorithms<br>#thinking
+- [ ] Add to intro that layout optimization is a thing
 
 
 ## To do, high pririty
 
-- [ ] Lav et nyt environment så den sampler hele tiden en ny state.
-- [ ] Change reward to be percentage increase and test it a bit
 - [ ] Look into transfer learning<br>[[Transfer learning]]
-- [ ] Make overview and train some agents
 - [ ] Read about how to make stable baselines only save best agents
 - [ ] Make a short picture detailing what turbine is what in the "simulation"
+- [ ] Save and load model parameters<br>https://stable-baselines3.readthedocs.io/en/master/guide/examples.html#id3
 
 
 ## Waiting
 
-- [ ] Find limits for yaw angels Floris<br>#thinking<br>Wainting on guthub reply
 
 
 ## Doing
@@ -41,6 +39,12 @@ kanban-plugin: basic
 
 ## Done
 
+- [ ] Change environment so that the upper and lower limits are hardcoded, on the observations, but the limits still sample.
+- [ ] Lav et nyt environment så den sampler hele tiden en ny state.
+- [ ] Create different environments and an overview of them
+- [ ] Find limits for yaw angels Floris<br>#thinking<br>Wainting on guthub reply
+- [ ] Make overview and train some agents
+- [ ] Change reward to be percentage increase and test it a bit
 - [ ] Make code that can compare the trained agents
 - [ ] Make code so that trained agent can be loaded on windows.<br>https://github.com/hill-a/stable-baselines/issues/1024
 - [ ] Make docs for overview of trained agents

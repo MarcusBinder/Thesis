@@ -1,3 +1,2 @@
-
-def boo(x):
-    print(x)
+import numpy as np
+print(np.pi)
