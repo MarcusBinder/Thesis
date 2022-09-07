@@ -288,30 +288,11 @@ class CustomEnv2(gym.Env):
         self.layout_x =  xv.flatten()
         self.layout_y = yv.flatten()
         
-        # #Reads and saves the power curve for one turbine:
-        # with open(turb_type+".yaml", 'r') as stream:
-        #     try:
-        #         parsed_yaml=yaml.safe_load(stream)
-        #         #print(parsed_yaml)
-        #     except yaml.YAMLError as exc:
-        #         print(exc)
-
-        # ws_curve = parsed_yaml["power_thrust_table"]["wind_speed"]
-        # power_curve = parsed_yaml["power_thrust_table"]["power"]
-        
-        # self.A = 3.14 * (D/2)**2
-        # self.power_curve = interpolate.interp1d(ws_curve, power_curve)
-        
-
-        # Define action and observation space
         
         # The actionspace is the 9 yaw angles.
         self.action_space = spaces.Box(low=-1, high=1,
                                             shape=(nx*ny,), dtype=np.float32)
         
-        # The observationspace is WD, WS, TI:
-        # high = np.array([self.wd_max, self.wind_speed_max, self.TI_max], dtype = np.float32)
-        # low = np.array([self.wd_min, self.wind_speed_min, self.TI_min], dtype = np.float32)
 
         
         high = np.array([1, 1, 1], dtype = np.float32)
@@ -347,17 +328,16 @@ class CustomEnv2(gym.Env):
         
         #Calculate greedy power. Used for normalization
         self.fi.calculate_wake()
-        power_greedy_farm = self.fi.get_farm_power()
+        self.power_greedy_farm = self.fi.get_farm_power()[0][0]
 
-        self.fi.calculate_wake(yaw_angles=np.array([[action]]))  #weird format, but it's okay
+        self.fi.calculate_wake(yaw_angles=np.array([[action*self.yaw_max]]))  
         
-        power_farm = self.fi.get_farm_power()[0][0]
+        self.power_agent_farm = self.fi.get_farm_power()[0][0]
         
         #Calculates the pct increase in power!
-        increase = power_farm - power_greedy_farm[0][0]
-        rew = (increase/power_greedy_farm[0][0])*100
+        increase = self.power_agent_farm - self.power_greedy_farm
+        rew = (increase/self.power_greedy_farm)*100
         
-
         reward = rew  
             
         info = {}

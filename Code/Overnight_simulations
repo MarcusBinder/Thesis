@@ -13,7 +13,8 @@ from Custom_functions import CustomEnv2
 
 if __name__ == '__main__':
 
-    model_names = ["PPO4", "PPO5", "PPO6"]
+    #model_names = ["PPO4", "PPO5", "PPO6"]
+    model_names = ["A2C4", "A2C5", "A2C6"]
     SEEDS = [0, 3, 7]
  
     for model_name, SEED in zip(model_names, SEEDS):
@@ -28,8 +29,8 @@ if __name__ == '__main__':
         num_cpu = 2  # Number of processes to use
         env = make_vec_env(lambda: env, n_envs=num_cpu, seed=SEED, vec_env_cls=DummyVecEnv)
 
-        model = PPO("MlpPolicy", env, verbose=1, tensorboard_log='logs', seed = SEED)
-        #model = A2C("MlpPolicy", env, verbose=1, tensorboard_log='logs', seed = SEED)
+        #model = PPO("MlpPolicy", env, verbose=1, tensorboard_log='logs', seed = SEED)
+        model = A2C("MlpPolicy", env, verbose=1, tensorboard_log='logs', seed = SEED)
     
         models_dir = "models/"+model_name
         log_dir = "logs"
