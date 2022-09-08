@@ -13,7 +13,6 @@ kanban-plugin: basic
 
 ## To do, low priority
 
-- [ ] Make colors for plots the same<br>So wind_color is all the same and so on...
 - [ ] Add back in the scaling factor to Floris<br>#Brainless
 - [ ] "code algorithm"<br>#thinking
 - [ ] Read about and choose algorithm<br>#thinking
@@ -31,6 +30,7 @@ kanban-plugin: basic
 
 ## Waiting
 
+- [ ] Number of cluster cores - Waiting on christoffer
 
 
 ## Doing
@@ -39,6 +39,7 @@ kanban-plugin: basic
 
 ## Done
 
+- [ ] Make colors for plots the same<br>So wind_color is all the same and so on...
 - [ ] Change environment so that the upper and lower limits are hardcoded, on the observations, but the limits still sample.
 - [ ] Lav et nyt environment så den sampler hele tiden en ny state.
 - [ ] Create different environments and an overview of them
