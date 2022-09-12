@@ -1,44 +1,43 @@
 import gym
 import numpy as np
-from stable_baselines3 import A2C, DDPG, SAC, PPO
-from matplotlib import axis
+#from stable_baselines3 import A2C, DDPG, SAC, PPO
+#from matplotlib import axis
 import numpy as np
 from floris.tools import FlorisInterface
-from floris.tools.visualization import visualize_cut_plane
-import matplotlib.pyplot as plt
-from floris.tools.optimization.yaw_optimization.yaw_optimizer_sr import YawOptimizationSR
+#from floris.tools.visualization import visualize_cut_plane
+#import matplotlib.pyplot as plt
+#from floris.tools.optimization.yaw_optimization.yaw_optimizer_sr import YawOptimizationSR
 
 from gym import spaces
 
-from stable_baselines3.common.env_checker import check_env
-import os
-import time
-from tqdm import tqdm_notebook
-from stable_baselines3.common.monitor import Monitor
-from stable_baselines3.common.results_plotter import load_results, ts2xy
-from stable_baselines3.common.noise import NormalActionNoise
-from stable_baselines3.common.callbacks import BaseCallback
+#from stable_baselines3.common.env_checker import check_env
+#import os
+#import time
+#from tqdm import tqdm_notebook
+#from stable_baselines3.common.monitor import Monitor
+#from stable_baselines3.common.results_plotter import load_results, ts2xy
+#from stable_baselines3.common.noise import NormalActionNoise
+#from stable_baselines3.common.callbacks import BaseCallback
 
-from stable_baselines3.common.vec_env import DummyVecEnv, SubprocVecEnv
-from stable_baselines3.common.env_util import make_vec_env
-from stable_baselines3.common.utils import set_random_seed
+#from stable_baselines3.common.vec_env import DummyVecEnv, SubprocVecEnv
+#from stable_baselines3.common.env_util import make_vec_env
+#from stable_baselines3.common.utils import set_random_seed
 
-from matplotlib.pyplot import figure
+#from matplotlib.pyplot import figure
 
 #loading optimization package:
-from scipy.optimize import minimize
+#from scipy.optimize import minimize
 
-from floris.tools.optimization.yaw_optimization.yaw_optimizer_scipy import (
-    YawOptimizationScipy
-)
+# from floris.tools.optimization.yaw_optimization.yaw_optimizer_scipy import (
+#     YawOptimizationScipy
+# )
 
-from time import perf_counter as timerpc
+#from time import perf_counter as timerpc
 
 import yaml
-import math
-from scipy import interpolate
+#import math
+#from scipy import interpolate
 import random
-
 
 
 class CustomEnv(gym.Env):
@@ -336,9 +335,8 @@ class CustomEnv2(gym.Env):
         
         #Calculates the pct increase in power!
         increase = self.power_agent_farm - self.power_greedy_farm
-        rew = (increase/self.power_greedy_farm)*100
         
-        reward = rew  
+        reward = (increase/self.power_greedy_farm)*100
             
         info = {}
         # The observationspace is WD, WS, TI:

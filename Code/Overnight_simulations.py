@@ -13,9 +13,9 @@ from Custom_functions import CustomEnv2
 
 if __name__ == '__main__':
 
-    model_names = ["PPO4", "PPO5", "PPO6"]
+    model_names = ["PPO1", "PPO2"]
     #model_names = ["A2C4", "A2C5", "A2C6"]
-    SEEDS = [0, 3, 7]
+    SEEDS = [0, 3]
  
     for model_name, SEED in zip(model_names, SEEDS):
 
@@ -26,7 +26,7 @@ if __name__ == '__main__':
                     yaw_max = 30, rho = 1.225, seed = SEED)
 
 
-        num_cpu = 2  # Number of processes to use
+        num_cpu = 4  # Number of processes to use
         env = make_vec_env(lambda: env, n_envs=num_cpu, seed=SEED, vec_env_cls=DummyVecEnv)
 
         model = PPO("MlpPolicy", env, verbose=1, tensorboard_log='logs', seed = SEED)
@@ -45,7 +45,7 @@ if __name__ == '__main__':
 
         print("Start learning")
 
-        for i in range(1,20):
+        for i in range(1,40+1):
             model.learn(total_timesteps = TIMESTEPS, reset_num_timesteps = False, tb_log_name=model_name)
             model.save(f"{models_dir}/{TIMESTEPS*i}")
         
