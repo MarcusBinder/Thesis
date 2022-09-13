@@ -7,9 +7,11 @@
         "id": "43541d855776a00d",
         "type": "leaf",
         "state": {
-          "type": "kanban",
+          "type": "markdown",
           "state": {
-            "file": "Thesis Kanban.md"
+            "file": "Text snippets.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -68,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Thesis Kanban.md",
+                "file": "Text snippets.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,8 +90,8 @@
   "active": "43541d855776a00d",
   "lastOpenFiles": [
     "Thesis.md",
-    "Transfer learning.md",
     "Thesis Kanban.md",
+    "Transfer learning.md",
     "Text snippets.md",
     "Spinning up notes.md",
     "Untitled.md",

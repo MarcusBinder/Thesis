@@ -33,20 +33,31 @@ A lot of parameters so hard to model.
 
 Turbines down for maintenance. 
 
-## Wind farm environment
-Description of the environment and the formulas/models used.
-
+## Theory behind wind/wake calculations
+A chapter dedicated to the maths behind wind/wake calculations.
 
 ## Reinforcement learning
-
+A chapter dedicated to go over the math behind a chosen algorithm.
+The sections could be:
 ### Introduction to RL
 Markov decision.
-
 ### Model based vs model free
-text here.
-
+Maybe not relevant anymore. Depend on chosen algorithm.
 ### Theory behind chosen algorithm
 Maths
+
+
+## Wind farm environment
+Description of the environment and the formulas/models used.
+Also some text about the software packages used.
+
+## Experiments
+Big ol list of experiments.
+
+## Results
+Big ol list of result of experiments
+
+
 
 
 

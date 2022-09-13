@@ -22,6 +22,7 @@ kanban-plugin: basic
 
 ## To do, high pririty
 
+- [ ] Lav et NN, som giver power output af farmen.
 - [ ] Look into transfer learning<br>[[Transfer learning]]
 - [ ] Read about how to make stable baselines only save best agents
 - [ ] Make a short picture detailing what turbine is what in the "simulation"

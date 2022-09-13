@@ -348,9 +348,9 @@ class CustomEnv2(gym.Env):
         random.seed(self.SEED)
         np.random.seed(self.SEED)
 
-        #
-        self.ws = np.random.uniform(self.wind_speed_min, self.wind_speed_max)
-        self.wd = np.random.uniform(self.wd_min, self.wd_max)
+        #np.round(A,decimals=1)
+        self.ws = np.round(np.random.uniform(self.wind_speed_min, self.wind_speed_max), decimals=1)
+        self.wd = np.round(np.random.uniform(self.wd_min, self.wd_max), decimals=1)
         self.TI = np.random.uniform(self.TI_min, self.TI_max)
         
         self.ws_norm = (self.ws - self.ws_range_min)/(self.ws_range_max - self.ws_range_min)

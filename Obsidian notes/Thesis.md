@@ -1,5 +1,12 @@
 # Thesis
 
+# Note this
+As some policy are stochastic by default (e.g. A2C or PPO), you should also try to set deterministic=True when calling the .predict() method, this frequently leads to better performance. Looking at the training curve (episode reward function of the timesteps) is a good proxy but underestimates the agent true performance.
+From: https://stable-baselines.readthedocs.io/en/master/guide/rl_tips.html
+
+It states that the training curve underestimates the agents true performance.
+
+
 ### Nomenclature
 - MARL --  Multi agent reinforcement learning   
 
