@@ -8,21 +8,20 @@ from stable_baselines3.common.env_util import make_vec_env
 from stable_baselines3.common.utils import set_random_seed
 from stable_baselines3.common.env_checker import check_env
 
-from Custom_functions import CustomEnv7
+from Custom_functions import CustomEnv9
 
 
 if __name__ == '__main__':
 
     #model_names = ["PPO1", "PPO2"]
-    model_names = ["A2C21", "A2C22"]
-    SEEDS = [0, 10]
+    model_names = ["A2C25", "A2C26"]
+    SEEDS = [0, 42]
  
     for model_name, SEED in zip(model_names, SEEDS):
 
-        env = CustomEnv7(t_steps = 10, dist = 5, nx = 2, ny = 2,
+        env = CustomEnv9(t_steps = 100, dist = 5, nx = 2, ny = 2,
                     turb_type = 'nrel_5MW', combination = 'sosfs', deflection = 'gauss',
-                    turbulence = 'crespo_hernandez', velocity = 'gauss',
-                    WS_min = 7, WS_max = 7, TI_min = 0.05, TI_max = 0.05, wd_min = 270, wd_max = 315, 
+                    turbulence = 'crespo_hernandez', velocity = 'gauss', wd_possible = (270, 285, 300, 315, 330, 345, 360),
                     yaw_max = 30, rho = 1.225, seed = SEED)
 
 

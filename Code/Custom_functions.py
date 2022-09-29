@@ -1335,3 +1335,369 @@ class CustomEnv7(gym.Env):
 
     def change_seed(self, seed):
         self.seed = seed
+
+#########################################################################
+########################### ENV 8 #######################################
+#########################################################################
+
+class CustomEnv8(gym.Env):
+    """
+    t_steps     = number of timesteps pr simulation
+    dist        = rotor diameters between the turbines
+    nx          = number of turbines along x axis
+    ny          = number of turbines along y axis
+    turb_type   = The type of turbine used for the environment
+    combination = The combination model
+    deflection  = The deflection model
+    turbulence  = The turbulence model
+    velocity    = The wake velocity model
+    VS_min      = minimum wind speed [m/s]
+    VS_max      = maximum wind speed [m/s]
+    TI_min      = minimum turbulence intensity
+    TI_max      = maximum turbulence intensity
+    wd_min      = minimum wind direction
+    wd_max      = maximum wind direction
+    yaw_max     = Is the maximum yaw offset allowed in degrees.
+    
+    """
+    #Custom Environment that follows gym interface
+    metadata = {'render.modes': ['human']}
+
+    def __init__(self, t_steps = 100, dist = 5, nx = 3, ny = 3,
+               turb_type = 'nrel_5MW', combination = 'sosfs', deflection = 'gauss',
+               turbulence = 'crespo_hernandez', velocity = 'gauss', wd_possible = (270, 360),
+               yaw_max = 30, rho = 1.225, seed = 0):
+        super(CustomEnv8, self).__init__()
+        
+        self.ws_range_min = 2
+        self.ws_range_max = 20
+
+        self.ti_range_min = 0.0
+        self.ti_range_max = 0.20
+        
+        self.wd_range_min = min(wd_possible)
+        self.wd_range_max = max(wd_possible)
+        self.wd_possible = wd_possible
+        
+        self.SEED = seed
+
+        self.t_max = t_steps   #The number of "simulations" pr episode.
+        #self.wind_speed_min = WS_min
+        #self.wind_speed_max = WS_max
+        #self.TI_min         = TI_min
+        #self.TI_max         = TI_max
+        #self.wd_min         = min(wd)
+        #self.wd_max         = max(wd)
+        self.n_turb         = nx * ny
+        self.yaw_max        = yaw_max
+        self.rho            = rho
+                     
+        #Creates the base for the farm
+        fi = FlorisInterface("gch.yaml")   
+        
+        #Turns it into a dictionary and then does the changes to the model
+        fi_dict = fi.floris.as_dict()
+        
+        fi_dict["farm"]["turbine_type"] = [turb_type]
+        fi_dict["wake"]["model_strings"]["combination_model"] = combination
+        fi_dict["wake"]["model_strings"]["deflection_model"]  = deflection
+        fi_dict["wake"]["model_strings"]["turbulence_model"]  = turbulence
+        fi_dict["wake"]["model_strings"]["velocity_model"]    = velocity
+        fi_dict["flow_field"]["air_density"]                  = rho
+        
+        # Turns it back into a floris object:
+        self.fi = FlorisInterface(fi_dict)
+
+        D = self.fi.floris.farm.rotor_diameters[0]
+
+        x = np.linspace(0, D*dist*nx, nx)
+        y = np.linspace(0, D*dist*ny, ny)
+
+        xv, yv = np.meshgrid(x, y, indexing='xy')
+        
+        self.layout_x =  xv.flatten()
+        self.layout_y = yv.flatten()
+        
+        
+        # The actionspace is the 9 yaw angles.
+        self.action_space = spaces.Box(low=-1, high=1,
+                                            shape=(nx*ny,), dtype=np.float32)
+        
+
+        self.observation_space = spaces.Box(low = 0, high = 1,
+                                            shape = (1,), dtype=np.float32) #The observation space is now: [wd]
+
+        random.seed(self.SEED)
+        np.random.seed(self.SEED)
+        self.reset()
+        
+    def step(self, action):
+
+        if self.time > self.t_max:
+            done =  True
+        else:
+            done = False
+
+        self.time += 1 #increment by one.
+        
+        self.fi.reinitialize(
+            layout=(self.layout_x, self.layout_y),
+            wind_directions=[self.wd],
+            turbulence_intensity= self.TI,
+            wind_speeds=[self.ws]
+            )
+        
+        self.yaw_current = action * self.yaw_max 
+
+        self.fi.calculate_wake()
+        self.power_greedy_farm = self.fi.get_farm_power()[0][0]
+
+
+        self.fi.calculate_wake(yaw_angles=np.array([[self.yaw_current]]))  
+        self.power_agent_farm = self.fi.get_farm_power()[0][0]
+        
+        reward = self.power_agent_farm/self.power_greedy_farm - 1
+
+        # If negative reward, add large penalty.
+        if reward < 0:
+            reward += -3
+
+        
+        obs_scaled = self.scale_obs(self.wd)
+        self.observation = obs_scaled
+
+
+
+        info = {}
+        # The observationspace is WD:
+        return self.observation, reward, done, info
+    
+    def reset(self):
+
+        self.ws = np.array(7, dtype=np.float32)
+        self.wd = np.random.choice(self.wd_possible).astype(np.float32)
+        self.TI = np.array(0.07, dtype=np.float32)
+
+        obs_scaled = self.scale_obs(self.wd)
+        
+        self.fi.reinitialize(
+            layout=(self.layout_x, self.layout_y),
+            wind_directions=[self.wd],
+            turbulence_intensity= self.TI,
+            wind_speeds=[self.ws]
+            )
+        
+        
+        #Calculate greedy power. Used for normalization
+        #self.fi.calculate_wake()
+        #self.power_greedy_farm = self.fi.get_farm_power()[0][0]
+        
+        self.time = 0
+        #done = False
+        self.observation = obs_scaled
+        return self.observation  # reward, done, info can't be included
+
+    def scale_obs(self, wd):
+        #Takes inputs and scales them to fit the observation space.
+
+        self.wd_norm = (wd - self.wd_range_min)/(self.wd_range_max - self.wd_range_min)
+        #(self.wd_range_max - self.wd_range_min) * (wd - self.wd_range_min)/(self.wd_range_max - self.wd_range_min) + self.wd_range_min  
+        #self.ws_norm = 2 * (ws - self.ws_range_min)/(self.ws_range_max - self.ws_range_min) -1
+        #self.TI_norm = 2 * (TI - self.ti_range_min)/(self.ti_range_max - self.ti_range_min) -1  
+
+        #obs_scaled = np.concatenate( (self.wd_norm, self.ws_norm, self.TI_norm), axis = None).astype(np.float32)
+        obs_scaled = np.array((self.wd_norm,)).astype(np.float32)
+        return obs_scaled
+    
+    def render(self, mode='human'):
+        pass
+    
+    def close (self):
+        pass
+
+    def change_seed(self, seed):
+        self.seed = seed
+
+#########################################################################
+########################### ENV 9 #######################################
+#########################################################################
+
+class CustomEnv9(gym.Env):
+    """
+    t_steps     = number of timesteps pr simulation
+    dist        = rotor diameters between the turbines
+    nx          = number of turbines along x axis
+    ny          = number of turbines along y axis
+    turb_type   = The type of turbine used for the environment
+    combination = The combination model
+    deflection  = The deflection model
+    turbulence  = The turbulence model
+    velocity    = The wake velocity model
+    VS_min      = minimum wind speed [m/s]
+    VS_max      = maximum wind speed [m/s]
+    TI_min      = minimum turbulence intensity
+    TI_max      = maximum turbulence intensity
+    wd_min      = minimum wind direction
+    wd_max      = maximum wind direction
+    yaw_max     = Is the maximum yaw offset allowed in degrees.
+    
+    """
+    #Custom Environment that follows gym interface
+    metadata = {'render.modes': ['human']}
+
+    def __init__(self, t_steps = 100, dist = 5, nx = 3, ny = 3,
+               turb_type = 'nrel_5MW', combination = 'sosfs', deflection = 'gauss',
+               turbulence = 'crespo_hernandez', velocity = 'gauss', wd_possible = (270, 360),
+               yaw_max = 30, rho = 1.225, seed = 0, negative_reward = 1):
+        super(CustomEnv9, self).__init__()
+        
+        self.ws_range_min = 2
+        self.ws_range_max = 20
+
+        self.ti_range_min = 0.0
+        self.ti_range_max = 0.20
+        
+        self.wd_range_min = min(wd_possible)
+        self.wd_range_max = max(wd_possible)
+        self.wd_possible = wd_possible
+        self.negative_reward = negative_reward
+        
+        self.SEED = seed
+
+        self.t_max = t_steps   #The number of "simulations" pr episode.
+        #self.wind_speed_min = WS_min
+        #self.wind_speed_max = WS_max
+        #self.TI_min         = TI_min
+        #self.TI_max         = TI_max
+        #self.wd_min         = min(wd)
+        #self.wd_max         = max(wd)
+        self.n_turb         = nx * ny
+        self.yaw_max        = yaw_max
+        self.rho            = rho
+                     
+        #Creates the base for the farm
+        fi = FlorisInterface("gch.yaml")   
+        
+        #Turns it into a dictionary and then does the changes to the model
+        fi_dict = fi.floris.as_dict()
+        
+        fi_dict["farm"]["turbine_type"] = [turb_type]
+        fi_dict["wake"]["model_strings"]["combination_model"] = combination
+        fi_dict["wake"]["model_strings"]["deflection_model"]  = deflection
+        fi_dict["wake"]["model_strings"]["turbulence_model"]  = turbulence
+        fi_dict["wake"]["model_strings"]["velocity_model"]    = velocity
+        fi_dict["flow_field"]["air_density"]                  = rho
+        
+        # Turns it back into a floris object:
+        self.fi = FlorisInterface(fi_dict)
+
+        D = self.fi.floris.farm.rotor_diameters[0]
+
+        x = np.linspace(0, D*dist*nx, nx)
+        y = np.linspace(0, D*dist*ny, ny)
+
+        xv, yv = np.meshgrid(x, y, indexing='xy')
+        
+        self.layout_x =  xv.flatten()
+        self.layout_y = yv.flatten()
+        
+        
+        # The actionspace is the 9 yaw angles.
+        self.action_space = spaces.Box(low=-1, high=1,
+                                            shape=(nx*ny,), dtype=np.float32)
+        
+
+        self.observation_space = spaces.Box(low = 0, high = 1,
+                                            shape = (1,), dtype=np.float32) #The observation space is now: [wd]
+
+        random.seed(self.SEED)
+        np.random.seed(self.SEED)
+        self.reset()
+        
+    def step(self, action):
+
+        if self.time > self.t_max:
+            done =  True
+        else:
+            done = False
+
+        self.time += 1 #increment by one.
+        
+        self.fi.reinitialize(
+            layout=(self.layout_x, self.layout_y),
+            wind_directions=[self.wd],
+            turbulence_intensity= self.TI,
+            wind_speeds=[self.ws]
+            )
+        
+        self.yaw_current = action * self.yaw_max 
+
+        self.fi.calculate_wake()
+        self.power_greedy_farm = self.fi.get_farm_power()[0][0]
+
+
+        self.fi.calculate_wake(yaw_angles=np.array([[self.yaw_current]]))  
+        self.power_agent_farm = self.fi.get_farm_power()[0][0]
+        
+        reward = self.power_agent_farm/self.power_greedy_farm - 1
+
+        # If negative reward, add large penalty.
+        if reward < 0:
+            reward += -3
+
+        #now pick new wind direction.
+        self.wd = np.random.choice(self.wd_possible).astype(np.float32)
+        obs_scaled = self.scale_obs(self.wd)
+        self.observation = obs_scaled
+
+
+
+        info = {}
+        # The observationspace is WD:
+        return self.observation, reward, done, info
+    
+    def reset(self):
+
+        self.ws = np.array(7, dtype=np.float32)
+        self.wd = np.random.choice(self.wd_possible).astype(np.float32)
+        self.TI = np.array(0.07, dtype=np.float32)
+
+        obs_scaled = self.scale_obs(self.wd)
+        
+        self.fi.reinitialize(
+            layout=(self.layout_x, self.layout_y),
+            wind_directions=[self.wd],
+            turbulence_intensity= self.TI,
+            wind_speeds=[self.ws]
+            )
+        
+        
+        #Calculate greedy power. Used for normalization
+        #self.fi.calculate_wake()
+        #self.power_greedy_farm = self.fi.get_farm_power()[0][0]
+        
+        self.time = 0
+        #done = False
+        self.observation = obs_scaled
+        return self.observation  # reward, done, info can't be included
+
+    def scale_obs(self, wd):
+        #Takes inputs and scales them to fit the observation space.
+
+        self.wd_norm = (wd - self.wd_range_min)/(self.wd_range_max - self.wd_range_min)
+        #(self.wd_range_max - self.wd_range_min) * (wd - self.wd_range_min)/(self.wd_range_max - self.wd_range_min) + self.wd_range_min  
+        #self.ws_norm = 2 * (ws - self.ws_range_min)/(self.ws_range_max - self.ws_range_min) -1
+        #self.TI_norm = 2 * (TI - self.ti_range_min)/(self.ti_range_max - self.ti_range_min) -1  
+
+        #obs_scaled = np.concatenate( (self.wd_norm, self.ws_norm, self.TI_norm), axis = None).astype(np.float32)
+        obs_scaled = np.array((self.wd_norm,)).astype(np.float32)
+        return obs_scaled
+    
+    def render(self, mode='human'):
+        pass
+    
+    def close (self):
+        pass
+
+    def change_seed(self, seed):
+        self.seed = seed
