@@ -63,3 +63,5 @@ https://arxiv.org/abs/1709.06560
 
 Old stuff:
 [[Prethesis]]
+
+$$ [J(\pi) = \int_{\tau} P(\tau|\pi) R(\tau) = \under{E} {\tau\sim \pi}{R(\tau)} $$

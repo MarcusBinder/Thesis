@@ -36,6 +36,18 @@ Turbines down for maintenance.
 ## Theory behind wind/wake calculations
 A chapter dedicated to the maths behind wind/wake calculations.
 
+- Short introduction about power production of a turbine.
+	- Cp, Ct and yaw angles
+- Wake formulas
+	- Different formulas, and the categories of them
+		- Wake velocity
+		- Wake turbulence
+		- Wake deflection
+		- Wake combination
+	- Gaussian wake from floris, derivation.
+	- Discussion about l
+
+
 ## Reinforcement learning
 A chapter dedicated to go over the math behind a chosen algorithm.
 The sections could be:

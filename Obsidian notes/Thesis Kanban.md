@@ -13,33 +13,40 @@ kanban-plugin: basic
 
 ## To do, low priority
 
+- [ ] Make a short picture detailing what turbine is what in the "simulation"
 - [ ] Add back in the scaling factor to Floris<br>#Brainless
 - [ ] "code algorithm"<br>#thinking
 - [ ] Read about and choose algorithm<br>#thinking
 - [ ] Spinning up code algorithms<br>#thinking
 - [ ] Add to intro that layout optimization is a thing
+- [ ] man kunne lave power og thrust coefficienter som en funktion. Evt se paper: Integrated wind farm layout and control optimization. figur 1
 
 
 ## To do, high pririty
 
+- [ ] Reward functions:<br><br>1) Percentage increase<br>2) Mere power end sidst, indenfor et interval
+- [ ] Lav en liste over hvilke parametre der kan tunes, i forhold til optuna TD3<br>https://stable-baselines3.readthedocs.io/en/master/modules/td3.html
 - [ ] Lav et NN, som giver power output af farmen.
-- [ ] Look into transfer learning<br>[[Transfer learning]]
-- [ ] Read about how to make stable baselines only save best agents
-- [ ] Make a short picture detailing what turbine is what in the "simulation"
-- [ ] Save and load model parameters<br>https://stable-baselines3.readthedocs.io/en/master/guide/examples.html#id3
+- [ ] Hvis intet virker, så undersøg imitation learning
 
 
 ## Waiting
 
-- [ ] Number of cluster cores - Waiting on christoffer
+- [ ] 
 
 
 ## Doing
 
+- [ ] Deep Reinforcement Learning for Automatic Generation Control of Wind Farms<br>tjek det paper.<br>Det har intro som minder om mit RL intro
 
 
 ## Done
 
+- [ ] Se og kod det her: https://www.youtube.com/watch?v=ZhFO8EWADmY
+- [ ] Sæt discount factor til 0 og se hvad det gør af forskel!
+- [ ] Look into transfer learning<br>[[Transfer learning]]
+- [ ] Add a twist for the introduction so that it covers some of the problems with wind power.
+- [ ] Power point for meetingg
 - [ ] Make colors for plots the same<br>So wind_color is all the same and so on...
 - [ ] Change environment so that the upper and lower limits are hardcoded, on the observations, but the limits still sample.
 - [ ] Lav et nyt environment så den sampler hele tiden en ny state.
@@ -90,6 +97,10 @@ kanban-plugin: basic
 
 ## Scrapped
 
+- [ ] Undersøg parameter noise<br>https://openai.com/blog/better-exploration-with-parameter-noise<br>https://github.com/openai/baselines/tree/master/baselines/ddpg<br>https://github.com/openai/baselines/blob/master/baselines/ddpg/ddpg.py<br>https://github.com/openai/baselines/blob/master/baselines/ddpg/ddpg_learner.py<br>https://github.com/openai/baselines/blob/master/baselines/ddpg/noise.py
+- [ ] Number of cluster cores - Waiting on christoffer
+- [ ] Read about how to make stable baselines only save best agents
+- [ ] Save and load model parameters<br>https://stable-baselines3.readthedocs.io/en/master/guide/examples.html#id3
 - [ ] Create multi environment.<br>Look into already made environments for help<br>#maybe
 
 

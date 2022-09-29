@@ -372,6 +372,9 @@ class Turbine(BaseClass):
             fill_value=(0.0, 1.0),
             bounds_error=False,
         )
+        if self.rotor_area == None:
+            print("For some reason, rotor_area is None")
+            self.rotor_area = np.pi * self.rotor_radius ** 2.0
         inner_power = 0.5 * self.rotor_area * self.fCp_interp(wind_speeds) * self.generator_efficiency * wind_speeds ** 3
         self.power_interp = interp1d(
             wind_speeds,
