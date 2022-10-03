@@ -41,4 +41,5 @@ class SOSFS(BaseModel):
             np.array: The resulting flow field after applying the wake to the
                 base.
         """
+        #print("sosfs is being used")
         return np.hypot(wake_field, velocity_field)

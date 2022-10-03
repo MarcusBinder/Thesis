@@ -88,4 +88,5 @@ class CrespoHernandez(BaseModel):
         * ((delta_x) / rotor_diameter) ** self.downstream
         )
         # Mask the 1 values from above with zeros
+        #print("Crespo TI is used")
         return ti * np.array(downstream_mask)

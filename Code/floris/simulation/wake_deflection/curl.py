@@ -69,4 +69,5 @@ class Curl(VelocityDeflection):
         Returns:
             np.array: Zeros the same size as the flow field grid points.
         """
+        print("Curl wake delfection is used")
         return np.zeros(np.shape(x_locations))

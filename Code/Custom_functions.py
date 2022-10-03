@@ -1459,8 +1459,8 @@ class CustomEnv8(gym.Env):
         reward = self.power_agent_farm/self.power_greedy_farm - 1
 
         # If negative reward, add large penalty.
-        if reward < 0:
-            reward += -3
+        # if reward < 0:
+        #     reward += -3
 
         
         obs_scaled = self.scale_obs(self.wd)
@@ -1642,8 +1642,8 @@ class CustomEnv9(gym.Env):
         reward = self.power_agent_farm/self.power_greedy_farm - 1
 
         # If negative reward, add large penalty.
-        if reward < 0:
-            reward += -3
+        # if reward < 0:
+        #     reward += -3
 
         #now pick new wind direction.
         self.wd = np.random.choice(self.wd_possible).astype(np.float32)

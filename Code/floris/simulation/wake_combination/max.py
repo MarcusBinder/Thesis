@@ -48,4 +48,5 @@ class MAX(BaseModel):
             np.array: The resulting flow field after applying the wake to the
                 base.
         """
+        #print("max is used")
         return np.maximum(wake_field, velocity_field)

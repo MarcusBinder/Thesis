@@ -60,5 +60,5 @@ class NoneVelocityDeflection(BaseModel):
                 "To resolve this error, please ensure secondary steering is disabled in your " +
                 "input file and ensure no nonzero yaw angles are passed to the floris object."
             )
-
+        #print("no wake deflection is used")
         return np.zeros_like(freestream_velocity)

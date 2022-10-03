@@ -42,4 +42,5 @@ class FLS(BaseModel):
             np.array: The resulting flow field after applying the wake to the
                 base.
         """
+        #print("Fls is used")
         return wake_field + velocity_field

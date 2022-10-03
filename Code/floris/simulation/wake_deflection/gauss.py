@@ -138,6 +138,7 @@ class GaussVelocityDeflection(BaseModel):
             np.array: Deflection field for the wake.
         """
         # ==============================================================
+        #print("gauss wake deflection is used")
 
         # Opposite sign convention in this model
         yaw_i = -1 * yaw_i

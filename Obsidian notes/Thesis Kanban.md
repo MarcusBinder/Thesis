@@ -14,20 +14,18 @@ kanban-plugin: basic
 ## To do, low priority
 
 - [ ] Make a short picture detailing what turbine is what in the "simulation"
+- [ ] Afsnit hvor du træner agenten på en nedskaleret setup, også tester på virkelige vindfarme
+- [ ] Lav et NN, som giver power output af farmen.
+- [ ] Papers som forklare GCH:<br>Control-oriented model for secondary effects of wake steering <br><br>Sensitivity and uncertainty of the FLORIS model applied on the lillgrund wind farm
 - [ ] Add back in the scaling factor to Floris<br>#Brainless
-- [ ] "code algorithm"<br>#thinking
-- [ ] Read about and choose algorithm<br>#thinking
-- [ ] Spinning up code algorithms<br>#thinking
 - [ ] Add to intro that layout optimization is a thing
 - [ ] man kunne lave power og thrust coefficienter som en funktion. Evt se paper: Integrated wind farm layout and control optimization. figur 1
 
 
 ## To do, high pririty
 
-- [ ] Reward functions:<br><br>1) Percentage increase<br>2) Mere power end sidst, indenfor et interval
-- [ ] Lav en liste over hvilke parametre der kan tunes, i forhold til optuna TD3<br>https://stable-baselines3.readthedocs.io/en/master/modules/td3.html
-- [ ] Lav et NN, som giver power output af farmen.
-- [ ] Hvis intet virker, så undersøg imitation learning
+- [ ] Lav tabel om beregningstid af GCH og curl model for 1-30 møller
+- [ ] Deep Reinforcement Learning for Automatic Generation Control of Wind Farms<br>tjek det paper.<br>Det har intro som minder om mit RL intro
 
 
 ## Waiting
@@ -37,11 +35,15 @@ kanban-plugin: basic
 
 ## Doing
 
-- [ ] Deep Reinforcement Learning for Automatic Generation Control of Wind Farms<br>tjek det paper.<br>Det har intro som minder om mit RL intro
+- [ ] Undersøg damage i floris
 
 
 ## Done
 
+- [ ] Spinning up code algorithms<br>#thinking
+- [ ] "code algorithm"<br>#thinking
+- [ ] Lav en liste over hvilke parametre der kan tunes, i forhold til optuna TD3<br>https://stable-baselines3.readthedocs.io/en/master/modules/td3.html
+- [ ] Read about and choose algorithm<br>#thinking
 - [ ] Se og kod det her: https://www.youtube.com/watch?v=ZhFO8EWADmY
 - [ ] Sæt discount factor til 0 og se hvad det gør af forskel!
 - [ ] Look into transfer learning<br>[[Transfer learning]]
@@ -97,6 +99,9 @@ kanban-plugin: basic
 
 ## Scrapped
 
+- [ ] Reward functions:<br><br>1) Percentage increase<br>2) Mere power end sidst, indenfor et interval
+- [ ] konkretiser evaluering af agent performance efter træning
+- [ ] Hvis intet virker, så undersøg imitation learning
 - [ ] Undersøg parameter noise<br>https://openai.com/blog/better-exploration-with-parameter-noise<br>https://github.com/openai/baselines/tree/master/baselines/ddpg<br>https://github.com/openai/baselines/blob/master/baselines/ddpg/ddpg.py<br>https://github.com/openai/baselines/blob/master/baselines/ddpg/ddpg_learner.py<br>https://github.com/openai/baselines/blob/master/baselines/ddpg/noise.py
 - [ ] Number of cluster cores - Waiting on christoffer
 - [ ] Read about how to make stable baselines only save best agents

@@ -14,7 +14,7 @@ from Custom_functions import CustomEnv8
 if __name__ == '__main__':
 
     #model_names = ["PPO1", "PPO2"]
-    model_names = ["A2C23", "A2C24"]
+    model_names = ["A2C31", "A2C32"]
     SEEDS = [0, 42]
  
     for model_name, SEED in zip(model_names, SEEDS):
@@ -44,7 +44,7 @@ if __name__ == '__main__':
 
         print("Start learning")
 
-        for i in range(1,80+1):
+        for i in range(1,150+1):
             model.learn(total_timesteps = TIMESTEPS, reset_num_timesteps = False, tb_log_name=model_name)
             model.save(f"{models_dir}/{TIMESTEPS*i}")
         

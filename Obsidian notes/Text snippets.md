@@ -28,13 +28,10 @@ evt tjek den her https://ens.dk/sites/ens.dk/files/EnergiKlimapolitik/energiscen
 
 
 ### Problems in wind farms
-Wakes are a problem... Can be fixed with axial induction or yaw control (or tilt).
-A lot of parameters so hard to model.
-
-Turbines down for maintenance. 
+Short introduction about potential problems with wakes in wind farms.
 
 ## Theory behind wind/wake calculations
-A chapter dedicated to the maths behind wind/wake calculations.
+A chapter dedicated to the math behind wind/wake calculations.
 
 - Short introduction about power production of a turbine.
 	- Cp, Ct and yaw angles
@@ -44,7 +41,7 @@ A chapter dedicated to the maths behind wind/wake calculations.
 		- Wake turbulence
 		- Wake deflection
 		- Wake combination
-	- Gaussian wake from floris, derivation.
+	- Gaussian wake from floris, possible derivation/detailed description of gaussian model used in floris.
 	- Discussion about l
 
 
@@ -52,22 +49,23 @@ A chapter dedicated to the maths behind wind/wake calculations.
 A chapter dedicated to go over the math behind a chosen algorithm.
 The sections could be:
 ### Introduction to RL
-Markov decision.
-### Model based vs model free
-Maybe not relevant anymore. Depend on chosen algorithm.
+Markov decision and general math behind rl
 ### Theory behind chosen algorithm
-Maths
+The math/specif formulas that the chosen algorithm depends on
 
 
 ## Wind farm environment
 Description of the environment and the formulas/models used.
 Also some text about the software packages used.
+Action space, observation space.
+
 
 ## Experiments
 Big ol list of experiments.
 
 ## Results
 Big ol list of result of experiments
+
 
 
 

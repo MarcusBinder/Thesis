@@ -102,6 +102,7 @@ class JimenezVelocityDeflection(BaseModel):
         # as a scalar value for that dimension.
 
         # angle of deflection
+        print("jimenez wake deflection is used")
         xi_init = cosd(yaw_i) * sind(yaw_i) * ct_i / 2.0
 
         """

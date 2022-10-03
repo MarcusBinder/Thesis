@@ -171,7 +171,7 @@ class GaussVelocityDeficit(BaseModel):
             far_wake_deficit *= far_wake_mask
 
             velocity_deficit += far_wake_deficit
-
+        #print("gauss velocity used")
         return velocity_deficit
 
 
@@ -208,6 +208,7 @@ def rC(wind_veer, sigma_y, sigma_z, y, y_i, delta, z, HH, Ct, yaw, D):
     r = ne.evaluate("a * ( (y - y_i - delta) ** 2) - 2 * b * (y - y_i - delta) * (z - HH) + c * ((z - HH) ** 2)")
     d = np.clip(1 - (Ct * cosd(yaw) / ( 8.0 * sigma_y * sigma_z / (D * D) )), 0.0, 1.0)
     C = ne.evaluate("1 - sqrt(d)")
+    #print("rc function used")
     return r, C
 
 def mask_upstream_wake(mesh_y_rotated, x_coord_rotated, y_coord_rotated, turbine_yaw):
