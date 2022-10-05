@@ -41,7 +41,7 @@ from .floris_interface_legacy_reader import FlorisInterfaceLegacyV2
 from .visualization import visualize_cut_plane, visualize_quiver, plot_turbines_with_fi, plot_rotor_values
 from .wind_rose import WindRose
 from .uncertainty_interface import UncertaintyInterface
-
+#import sowfa_utilities
 # from floris.tools import (
     # cut_plane,
     # floris_interface,

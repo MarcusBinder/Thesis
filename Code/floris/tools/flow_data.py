@@ -61,7 +61,7 @@ class FlowData:
         self.origin = origin
 
         # Technically resolution is a restating of above, but it is useful to have
-        self.resolution = Vec3(len(np.unique(x)), len(np.unique(y)), len(np.unique(z)))
+        self.resolution = Vec3([len(np.unique(x)), len(np.unique(y)), len(np.unique(z))])
 
     def save_as_vtk(self, filename):
         """

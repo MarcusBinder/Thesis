@@ -334,6 +334,7 @@ class SowfaInterface(LoggerBase):
         return np.array(thrust_list)
 
     def read_flow_frame_SOWFA(self, filename):
+        #print("read_flow_frame_SOWFA is running")
         """
         Read flow array output from SOWFA
 
@@ -351,21 +352,21 @@ class SowfaInterface(LoggerBase):
                 if "SPACING" in read_data:
                     splitstring = read_data.rstrip().split(" ")
                     spacing = Vec3(
-                        float(splitstring[1]),
+                        [float(splitstring[1]),
                         float(splitstring[2]),
-                        float(splitstring[3]),
+                        float(splitstring[3]),]
                     )
                 if "DIMENSIONS" in read_data:
                     splitstring = read_data.rstrip().split(" ")
                     dimensions = Vec3(
-                        int(splitstring[1]), int(splitstring[2]), int(splitstring[3])
+                        [int(splitstring[1]), int(splitstring[2]), int(splitstring[3])]
                     )
                 if "ORIGIN" in read_data:
                     splitstring = read_data.rstrip().split(" ")
                     origin = Vec3(
-                        float(splitstring[1]),
+                        [float(splitstring[1]),
                         float(splitstring[2]),
-                        float(splitstring[3]),
+                        float(splitstring[3]),]
                     )
 
         # Set up x, y, z as lists
